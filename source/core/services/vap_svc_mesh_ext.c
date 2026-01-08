@@ -1140,10 +1140,9 @@ static int process_ext_webconfig_set_data_sta_bssid(vap_svc_t *svc, void *arg)
     if (ext->conn_state != connection_state_connected &&
         ext->conn_state != connection_state_connected_wait_for_csa &&
         ext->conn_state != connection_state_connected_scan_list) {
-        wifi_util_info_print(WIFI_CTRL, "%s:%d skip sta bssid change event: connection state: %s,"
+        wifi_util_info_print(WIFI_CTRL, "%s:%d not skipping sta bssid change event: connection state: %s,"
             "vap: %s, bssid: %s\n", __func__, __LINE__, ext_conn_state_to_str(ext->conn_state),
             vap_info->vap_name, bssid_str);
-        return 0;
     }
 
     if (ext->ext_fallback_parent_event_timeout_handler_id) {
