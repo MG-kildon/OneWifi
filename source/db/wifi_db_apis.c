@@ -6858,7 +6858,7 @@ int wifidb_init_radio_config_default(int radio_index,wifi_radio_operationParam_t
                 cfg.channel = 36;
             else
                 cfg.channel = 44;
-            cfg.channelWidth = WIFI_CHANNELBANDWIDTH_80MHZ;
+            cfg.channelWidth = WIFI_CHANNELBANDWIDTH_160MHZ;
 #if defined (_PP203X_PRODUCT_REQ_)
             cfg.variant = WIFI_80211_VARIANT_A | WIFI_80211_VARIANT_N | WIFI_80211_VARIANT_AC;
             cfg.DfsEnabled = true;
@@ -6877,7 +6877,7 @@ int wifidb_init_radio_config_default(int radio_index,wifi_radio_operationParam_t
         case WIFI_FREQUENCY_5H_BAND:
             cfg.operatingClass = 128;
             cfg.channel = 157;
-            cfg.channelWidth = WIFI_CHANNELBANDWIDTH_80MHZ;
+            cfg.channelWidth = WIFI_CHANNELBANDWIDTH_160MHZ;
 #if defined (_PP203X_PRODUCT_REQ_) || defined (_GREXT02ACTS_PRODUCT_REQ_)
             cfg.variant = WIFI_80211_VARIANT_A | WIFI_80211_VARIANT_N | WIFI_80211_VARIANT_AC;
             cfg.beaconInterval = 200;
